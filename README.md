@@ -49,7 +49,7 @@ CRUDMVCProject
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/Shisir2278/CrudMVC.git
+https://github.com/Shisir2278/CRUDMVCPROJECT1.git
 cd CrudMVC
 ```
 
