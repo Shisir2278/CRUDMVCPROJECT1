@@ -20,3 +20,46 @@ This project demonstrates the fundamentals of MVC architecture, database integra
 - **Entity Framework Core** – ORM for database operations  
 - **SQL Server** – Database  
 - **Bootstrap** – For basic UI styling 
+
+---
+
+## 📂 Project Structure
+CRUDMVCProject
+┣ Controllers
+┃ ┣ EmployeeController.cs
+┃ ┗ HomeController.cs
+┣ Data
+┃ ┗ ApplicationContext.cs
+┣ Migrations
+┣ Models
+┃ ┣ Employee.cs
+┃ ┗ ErrorViewModel.cs
+┣ Views
+┃ ┣ Employee (Create, Edit, Index)
+┃ ┣ Home (Index, Privacy)
+┃ ┗ Shared (_Layout, Error, etc.)
+┣ wwwroot
+┣ appsettings.json
+┗ Program.cs
+
+
+---
+
+## ⚙️ Setup Instructions
+
+### 1. Clone the Repository
+```bash
+git clone https://github.com/Shisir2278/CrudMVC.git
+cd CrudMVC
+```
+
+### 2. Configure the Database
+
+1. Open the **`appsettings.json`** file in the project.  
+2. Update the connection string with your **SQL Server name**:
+
+```json
+"ConnectionStrings": {
+  "DefaultConnection": "Server=YOUR_SERVER_NAME;Database=CrudMVC;Trusted_Connection=True;MultipleActiveResultSets=true"
+},
+```
