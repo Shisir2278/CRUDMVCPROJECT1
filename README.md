@@ -23,34 +23,12 @@ This project demonstrates the fundamentals of MVC architecture, database integra
 
 ---
 
-## 📂 Project Structure
-CRUDMVCProject
-┣ Controllers
-┃ ┣ EmployeeController.cs
-┃ ┗ HomeController.cs
-┣ Data
-┃ ┗ ApplicationContext.cs
-┣ Migrations
-┣ Models
-┃ ┣ Employee.cs
-┃ ┗ ErrorViewModel.cs
-┣ Views
-┃ ┣ Employee (Create, Edit, Index)
-┃ ┣ Home (Index, Privacy)
-┃ ┗ Shared (_Layout, Error, etc.)
-┣ wwwroot
-┣ appsettings.json
-┗ Program.cs
-
-
----
-
 ## ⚙️ Setup Instructions
 
 ### 1. Clone the Repository
 ```bash
 https://github.com/Shisir2278/CRUDMVCPROJECT1.git
-cd CrudMVC
+cd CRUDMVCPROJECT1
 ```
 
 ### 2. Configure the Database
