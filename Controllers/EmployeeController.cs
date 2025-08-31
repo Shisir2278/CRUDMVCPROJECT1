@@ -59,12 +59,8 @@ namespace CRUDMVCProject.Controllers
         public IActionResult Edit(int id)
         {
             var emp = context.detail.SingleOrDefault(x => x.Id == id);
-            var result = new Employee();
-            {
-                Name = emp.Name;
-                Salary = emp.Salary;
-            }
-            return View(result);
+            if (emp == null) return NotFound();
+            return View(emp);
         }
 
         [HttpPost]
@@ -72,23 +68,20 @@ namespace CRUDMVCProject.Controllers
         {
             if (ModelState.IsValid)
             {
-                var data = new Employee
-
+                var data = context.detail.SingleOrDefault(x => x.Id == model.Id);
+                if (data != null)
                 {
-                    Name = model.Name,
-                    Salary = model.Salary,
-                };
-                context.detail.Add(data);
-                context.SaveChanges();
+                    data.Name = model.Name;
+                    data.Salary = model.Salary;
+
+                    context.detail.Update(data);
+                    context.SaveChanges();
+                }
                 return RedirectToAction("Index");
-
             }
-            else
-            {
-                return View(model);
-            }
-
+            return View(model);
         }
+
 
     }
 }
